@@ -1,0 +1,272 @@
+.App {
+    min-height: 100%;
+    color: var(--text-main);
+}
+
+.pageShell {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 16px 20px 28px;
+}
+
+.summaryPanel {
+    margin-bottom: 18px;
+}
+
+.summaryCopy h1 {
+    margin: 0;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+.summaryCopy p {
+    margin: 0.28rem 0 0;
+    color: var(--text-soft);
+    font-size: 0.8rem;
+    line-height: 1.35;
+}
+
+.summaryMetrics {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-top: 0.75rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--line);
+}
+
+.statCard {
+    min-width: 0;
+}
+
+.statLabel {
+    display: block;
+    color: var(--text-dim);
+    font-size: 0.61rem;
+    line-height: 1.1;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.statCard strong {
+    display: block;
+    margin-top: 0.18rem;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.scatterplotColumn {
+    display: grid;
+    gap: 18px;
+}
+
+.viewCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.42rem;
+    min-height: 0;
+}
+
+.viewHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 0.28rem;
+}
+
+.viewHeaderRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.viewHeadingGroup {
+    max-width: 40rem;
+}
+
+.viewHeader h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.viewHeader p {
+    margin: 0.12rem 0 0;
+    color: var(--text-soft);
+    font-size: 0.73rem;
+    line-height: 1.32;
+}
+
+.viewMeta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    color: var(--text-dim);
+}
+
+.viewMetaControl {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.16rem;
+}
+
+.viewMetaItem {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.22rem;
+}
+
+.viewMetaLabel,
+.viewMetaValue {
+    font-size: 0.66rem;
+    line-height: 1.2;
+}
+
+.viewMetaLabel {
+    color: var(--text-dim);
+}
+
+.viewMetaValue {
+    color: var(--text-soft);
+}
+
+.axisSelect {
+    min-width: 216px;
+    height: 28px;
+    padding: 0 0.48rem;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    background: #ffffff;
+    color: var(--text-main);
+    font-size: 0.68rem;
+    line-height: 1;
+}
+
+.axisSelect:focus {
+    outline: none;
+    border-color: var(--line-strong);
+}
+
+.chartShell {
+    position: relative;
+    min-height: 0;
+    padding: 0;
+}
+
+.chartShellScatter {
+    min-height: 352px;
+}
+
+.chartShellHierarchy {
+    min-height: 748px;
+}
+
+.chartTooltip {
+    position: absolute;
+    z-index: 8;
+    min-width: 208px;
+    max-width: 260px;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    background: #ffffff;
+    color: var(--text-main);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(2px);
+    transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.chartTooltip.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tooltipEyebrow {
+    margin-bottom: 0.16rem;
+    color: var(--text-dim);
+    font-size: 0.62rem;
+    line-height: 1.1;
+    text-transform: none;
+}
+
+.tooltipTitle {
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.tooltipMeta {
+    margin-top: 0.12rem;
+    color: var(--text-soft);
+    font-size: 0.7rem;
+    line-height: 1.2;
+}
+
+.tooltipGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.42rem 0.65rem;
+    margin-top: 0.55rem;
+}
+
+.tooltipStat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.tooltipStat span {
+    color: var(--text-dim);
+    font-size: 0.62rem;
+    line-height: 1.1;
+}
+
+.tooltipStat strong {
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+@media (max-width: 1180px) {
+    .summaryMetrics,
+    .dashboardGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboardGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .viewHeaderRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 760px) {
+    .pageShell {
+        padding: 12px 12px 22px;
+    }
+
+    .summaryMetrics {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .chartShellHierarchy {
+        min-height: 560px;
+    }
+}

@@ -1,0 +1,186 @@
+.hierarchyCard {
+    height: 100%;
+}
+
+.hierarchyPanelHeader {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.9rem;
+    align-items: flex-start;
+}
+
+.hierarchyIntro {
+    max-width: 34rem;
+}
+
+.hierarchyIntro h2 {
+    margin: 0;
+    font-family: "STIX Two Text", "Times New Roman", Georgia, serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+
+.hierarchyIntro p {
+    margin: 0.12rem 0 0;
+    color: var(--text-soft);
+    line-height: 1.32;
+    font-size: 0.73rem;
+}
+
+.hierarchyControlPanel {
+    min-width: 208px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.36rem;
+    align-items: stretch;
+}
+
+.layoutControlLabel {
+    color: var(--text-dim);
+    font-size: 0.62rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.hierarchyDivContainer {
+    height: 100%;
+    min-height: 640px;
+    margin-top: 0.35rem;
+}
+
+.hierarchyDivContainer svg {
+    overflow: visible;
+}
+
+.layoutSwitch {
+    display: inline-flex;
+    gap: 0.28rem;
+    flex-wrap: wrap;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.layoutButton {
+    border: 1px solid var(--line);
+    background: #ffffff;
+    color: var(--text-soft);
+    border-radius: 2px;
+    min-width: 0;
+    height: 28px;
+    padding: 0 0.46rem;
+    font: inherit;
+    font-size: 0.66rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.layoutButton:hover {
+    border-color: var(--chart-axis);
+    background: #fafafa;
+    color: var(--text-main);
+}
+
+.layoutButton.active {
+    background: #f8f8f8;
+    border-color: var(--chart-axis);
+    color: var(--text-main);
+}
+
+.legendInline {
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.legendInlineTitle {
+    margin-bottom: 0.2rem;
+    color: var(--text-dim);
+    font-size: 0.62rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.legendInlineScale {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.55rem;
+    align-items: center;
+}
+
+.legendInlineScale span {
+    color: var(--text-soft);
+    font-size: 0.6rem;
+}
+
+.legendInlineRamp {
+    height: 8px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    min-width: 160px;
+}
+
+.nodeGroup {
+    cursor: pointer;
+}
+
+.leafLabel,
+.stateLabel,
+.packLabel,
+.packStateLabelOverlay,
+.partitionLabel,
+.partitionStateLabelOverlay,
+.legendTitle,
+.legendTick {
+    pointer-events: none;
+}
+
+.leafLabel,
+.partitionLabel {
+    fill: #222222;
+    font-size: 0.55rem;
+    font-weight: 400;
+}
+
+.stateLabel,
+.packLabel,
+.packStateLabelOverlay,
+.partitionStateLabelOverlay {
+    fill: #222222;
+    font-size: 0.62rem;
+    font-weight: 600;
+    font-family: "STIX Two Text", "Times New Roman", Georgia, serif;
+    letter-spacing: 0;
+}
+
+.partitionStateLabelOverlay {
+    font-size: 0.58rem;
+}
+
+.stateOutline {
+    stroke: var(--line);
+    stroke-width: 0.8px;
+}
+
+.legendTitle,
+.legendTick {
+    fill: var(--text-dim);
+    font-size: 0.72rem;
+}
+
+@media (max-width: 1100px) {
+    .hierarchyPanelHeader {
+        flex-direction: column;
+    }
+
+    .hierarchyControlPanel {
+        min-width: 0;
+        width: 100%;
+    }
+}

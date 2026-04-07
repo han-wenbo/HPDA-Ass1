@@ -1,0 +1,62 @@
+:root {
+  color-scheme: light;
+  --page-bg: #ffffff;
+  --page-bg-alt: #ffffff;
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --surface-subtle: #f6f8fb;
+  --line: #b8c0c8;
+  --line-strong: #a9b1ba;
+  --text-main: #111111;
+  --text-soft: #444444;
+  --text-dim: #5b6776;
+  --accent: #8c3b2e;
+  --accent-strong: #6f2f25;
+  --accent-soft: rgba(140, 59, 46, 0.06);
+  --shadow-soft: none;
+  --radius-section: 2px;
+  --radius-plot: 2px;
+  --chart-surface: #ffffff;
+  --chart-line: #b8c0c8;
+  --chart-grid: #d6dce2;
+  --chart-axis: #66717d;
+  --chart-label: #222222;
+  --chart-point: #3a4652;
+  --chart-point-selected: #8c3b2e;
+  --chart-point-hover: #8c3b2e;
+  --chart-brush-fill: rgba(63, 75, 89, 0.08);
+  --chart-brush-stroke: rgba(63, 75, 89, 0.5);
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "STIX Two Text", "Times New Roman", Georgia, serif;
+  color: var(--text-main);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
